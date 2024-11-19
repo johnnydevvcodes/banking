@@ -4,8 +4,6 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
 
@@ -31,4 +29,7 @@ If you are using Cubit, Bloc, or other code-generation tools (like JsonSerializa
 Run the following command to generate the required files:
 
 flutter packages pub run build_runner build
+
+
+
 
