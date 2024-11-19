@@ -19,4 +19,7 @@ class EmptyState extends AppState {
   final String? message;
 }
 
-class ErrorState extends AppState {}
+class ErrorState<T> extends AppState {
+  ErrorState({this.message});
+  final T? message;
+}

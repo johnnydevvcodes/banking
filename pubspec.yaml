@@ -17,9 +17,13 @@ dependencies:
   retrofit: ^3.0.1+1
   flutter_bloc: ^8.1.6
   gap: ^3.0.1
-  flutter_modular: 6.1.0
-  dart_mappable: ^3.2.0
-  dart_mappable_builder:
+  flutter_modular: ^6.3.2
+  dart_mappable: ^4.3.0
+  path_provider: ^2.0.11
+  uuid: ^4.5.1
+  sembast: ^3.1.2
+  intl: any
+
 
 dev_dependencies:
   flutter_test:
@@ -28,6 +32,8 @@ dev_dependencies:
   retrofit_generator: ^4.0.1
   bloc_test: ^9.1.0
   mocktail: ^1.0.1
+  dart_mappable_builder:
+  build_runner:
 
 flutter:
 
