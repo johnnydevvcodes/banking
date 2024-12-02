@@ -1,6 +1,5 @@
 import 'package:bankingapp/app/dashboard/bloc/dashboard_cubit.dart';
 import 'package:bankingapp/app/dashboard/widgets/send_money_button_widget.dart';
-import 'package:bankingapp/app/send_money/screen/send_money_screen.dart';
 import 'package:bankingapp/app/transactions/screen/transaction_list_screen.dart';
 import 'package:bankingapp/core/app_state.dart';
 import 'package:bankingapp/core/extensions.dart';
