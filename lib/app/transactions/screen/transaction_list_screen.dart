@@ -1,8 +1,7 @@
-import 'package:bankingapp/app/transactions/transactions_cubit.dart';
+import 'package:bankingapp/app/transactions/bloc/transactions_cubit.dart';
+import 'package:bankingapp/app/transactions/widgets/continue_button_widget.dart';
 import 'package:bankingapp/core/app_state.dart';
-import 'package:bankingapp/core/extensions.dart';
 import 'package:bankingapp/core/transaction_entity.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -122,29 +121,7 @@ class _TransactionListScreenState extends State<TransactionListScreen> {
                           },
                         ),
                 ),
-              CupertinoButton(
-                onPressed: () async {
-                  context.pop();
-                },
-                padding: EdgeInsets.zero,
-                child: Container(
-                  padding: const EdgeInsets.all(16),
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: MediaQuery.paddingOf(context).bottom,
-                  ),
-                  width: MediaQuery.sizeOf(context).width,
-                  alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                    color: Colors.yellow,
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                  ),
-                  child: const Text(
-                    'Continue',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ),
-              ),
+                const ContinueButtonWidget(),
             ],
           ),
         );

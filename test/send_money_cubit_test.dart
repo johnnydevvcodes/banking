@@ -1,4 +1,4 @@
-import 'package:bankingapp/app/send_money/send_money_cubit.dart';
+import 'package:bankingapp/app/send_money/bloc/send_money_cubit.dart';
 import 'package:bankingapp/core/app_state.dart';
 import 'package:bankingapp/core/transaction_entity.dart';
 import 'package:bankingapp/data/account_repo.dart';

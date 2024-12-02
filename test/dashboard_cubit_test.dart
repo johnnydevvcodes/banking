@@ -1,4 +1,4 @@
-import 'package:bankingapp/app/dashboard/dashboard_cubit.dart';
+import 'package:bankingapp/app/dashboard/bloc/dashboard_cubit.dart';
 import 'package:bankingapp/core/app_state.dart';
 import 'package:bankingapp/data/account_repo.dart';
 import 'package:bloc_test/bloc_test.dart';

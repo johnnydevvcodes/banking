@@ -1,6 +1,7 @@
-import 'package:bankingapp/app/dashboard/dashboard_cubit.dart';
-import 'package:bankingapp/app/send_money/send_money_screen.dart';
-import 'package:bankingapp/app/transactions/transaction_list_screen.dart';
+import 'package:bankingapp/app/dashboard/bloc/dashboard_cubit.dart';
+import 'package:bankingapp/app/dashboard/widgets/send_money_button_widget.dart';
+import 'package:bankingapp/app/send_money/screen/send_money_screen.dart';
+import 'package:bankingapp/app/transactions/screen/transaction_list_screen.dart';
 import 'package:bankingapp/core/app_state.dart';
 import 'package:bankingapp/core/extensions.dart';
 import 'package:flutter/cupertino.dart';
@@ -117,14 +118,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
             ],
           ),
-          floatingActionButton: ElevatedButton(
-            onPressed: () => context.toScreen(const SendMoneyScreen()).then(
-              (value) {
-                BlocProvider.of<DashboardCubit>(context).initialize();
-              },
-            ),
-            child: const Text('Send Money'),
-          ),
+          floatingActionButton: const SendMoneyButtonWidget(),
         );
       },
     );

@@ -22,13 +22,14 @@ class AccountDao {
   }
 
   Future<num> getAccount() async {
-    final finder = Finder(sortOrders: [SortOrder('id')]);
-
-    final snapshots = await _accountStore.find(
-      await _db,
-      finder: finder,
-    );
     try {
+      final finder = Finder(sortOrders: [SortOrder('id')]);
+
+      final snapshots = await _accountStore.find(
+        await _db,
+        finder: finder,
+      );
+
       return snapshots.firstOrNull?.value['balance'] as num;
     } catch (e) {
       return 0;

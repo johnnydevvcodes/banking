@@ -1,7 +1,7 @@
-import 'package:bankingapp/app/dashboard/dashboard_cubit.dart';
-import 'package:bankingapp/app/dashboard/dashboard_screen.dart';
-import 'package:bankingapp/app/send_money/send_money_cubit.dart';
-import 'package:bankingapp/app/transactions/transactions_cubit.dart';
+import 'package:bankingapp/app/dashboard/bloc/dashboard_cubit.dart';
+import 'package:bankingapp/app/dashboard/screen/dashboard_screen.dart';
+import 'package:bankingapp/app/send_money/bloc/send_money_cubit.dart';
+import 'package:bankingapp/app/transactions/bloc/transactions_cubit.dart';
 import 'package:bankingapp/core/app_module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

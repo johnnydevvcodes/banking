@@ -14,18 +14,21 @@ class TransactionDao {
   }
 
   Future<List<TransactionResponse>> getTransactions() async {
-    final finder = Finder(sortOrders: [SortOrder('id')]);
+    try {
+      final finder = Finder(sortOrders: [SortOrder('id')]);
 
-    final snapshots = await _transactionStore.find(
-      await _db,
-      finder: finder,
-    );
-    TransactionResponse toExercise(s) =>
-        TransactionResponseMapper.fromMap(s.value);
-    if (snapshots.isEmpty) return [];
-    final transactions = snapshots.map(toExercise).toList();
-    transactions.sort((a, b) => a.id.compareTo(b.id));
-    return transactions;
+      final snapshots = await _transactionStore.find(
+        await _db,
+        finder: finder,
+      );
+      TransactionResponse toExercise(s) =>
+          TransactionResponseMapper.fromMap(s.value);
+      if (snapshots.isEmpty) return [];
+      final transactions = snapshots.map(toExercise).toList();
+      transactions.sort((a, b) => a.id.compareTo(b.id));
+      return transactions;
+    } catch (e) {
+      return [];
+    }
   }
-
 }

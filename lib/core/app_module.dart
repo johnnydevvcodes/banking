@@ -1,6 +1,6 @@
-import 'package:bankingapp/app/dashboard/dashboard_cubit.dart';
-import 'package:bankingapp/app/send_money/send_money_cubit.dart';
-import 'package:bankingapp/app/transactions/transactions_cubit.dart';
+import 'package:bankingapp/app/dashboard/bloc/dashboard_cubit.dart';
+import 'package:bankingapp/app/send_money/bloc/send_money_cubit.dart';
+import 'package:bankingapp/app/transactions/bloc/transactions_cubit.dart';
 import 'package:bankingapp/core/app_db.dart';
 import 'package:bankingapp/core/app_db_interface.dart';
 import 'package:bankingapp/data/account_dao.dart';

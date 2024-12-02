@@ -1,4 +1,5 @@
-import 'package:bankingapp/app/send_money/send_money_cubit.dart';
+import 'package:bankingapp/app/send_money/bloc/send_money_cubit.dart';
+import 'package:bankingapp/app/send_money/widgets/confirm_button_widget.dart';
 import 'package:bankingapp/core/app_state.dart';
 import 'package:bankingapp/core/extensions.dart';
 import 'package:flutter/cupertino.dart';
@@ -71,7 +72,8 @@ class _SendMoneyScreenState extends State<SendMoneyScreen> {
                   ),
                 ),
                 const Spacer(),
-                CupertinoButton(
+                ConfirmButtonWidget(
+                  isLoading: state is LoadingState,
                   onPressed: () async {
                     if (state is LoadingState) return;
 
@@ -82,26 +84,6 @@ class _SendMoneyScreenState extends State<SendMoneyScreen> {
                       num.parse(_textEditController.text),
                     );
                   },
-                  padding: EdgeInsets.zero,
-                  child: Container(
-                    padding: const EdgeInsets.all(16),
-                    margin: EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: MediaQuery.paddingOf(context).bottom,
-                    ),
-                    width: MediaQuery.sizeOf(context).width,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: state is LoadingState
-                          ? Colors.grey
-                          : Colors.greenAccent,
-                      borderRadius: const BorderRadius.all(Radius.circular(16)),
-                    ),
-                    child: const Text(
-                      'Confirm',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
                 ),
               ],
             ),

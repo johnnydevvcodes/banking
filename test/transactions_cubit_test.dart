@@ -1,4 +1,4 @@
-import 'package:bankingapp/app/transactions/transactions_cubit.dart';
+import 'package:bankingapp/app/transactions/bloc/transactions_cubit.dart';
 import 'package:bankingapp/core/app_state.dart';
 import 'package:bankingapp/core/transaction_entity.dart';
 import 'package:bankingapp/data/transaction_repo.dart';
